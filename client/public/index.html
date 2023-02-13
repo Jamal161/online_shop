@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <meta name="theme-color" content="#000000" /> -->
+  <meta name="description" content="Ecommerce store" />
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png">
+
+  <!-- Add manifest -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <!-- Tell the browser it's a PWA -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- Tell iOS it's a PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Make sure theme-color is defined -->
+  <meta name="theme-color" content="#536878">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <title>E - Store</title>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      width: 100%;
+    }
+
+    /* .App {
+      text-align: center;
+    }
+
+    .App-header {
+      background-color: #222;
+      height: 150px;
+      padding: 20px;
+      color: white;
+    }
+
+    .App-intro {
+      font-size: large;
+    } */
+
+    .loader-wrapper {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .loader {
+      border: 10px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 10px solid blue;
+      border-right: 10px solid green;
+      border-bottom: 10px solid red;
+      border-left: 10px solid yellow;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <!-- <div class="App">
+      <div class="App-header">
+        <h2>E-Store</h2>
+      </div>
+      <p class="App-intro">
+        Loading...
+      </p>
+    </div> -->
+
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function (err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function (err) {
+            console.log(err)
+          });
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+
+</html>

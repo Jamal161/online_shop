@@ -1,0 +1,19 @@
+export const TOGGLE_CART = 'TOGGLE_CART';
+
+export const FETCH_CART = 'FETCH_CART';
+
+export const ADD_TO_CART = 'ADD_TO_CART';
+
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+
+export const HANDLE_CART_TOTAL = 'HANDLE_CART_TOTAL';
+
+export const DEC_PRODUCT_QUANTITY = 'DEC_PRODUCT_QUANTITY';
+
+export const INC_PRODUCT_QUANTITY = 'INC_PRODUCT_QUANTITY';
+
+export const MERGE_CART = 'MERGE_CART';
+
+export const CART_LOADING = 'CART_LOADING';
+
+export const CLEAR_CART = 'CLEAR_CART';

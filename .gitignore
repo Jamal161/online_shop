@@ -1,0 +1,15 @@
+server/node_modules/
+client/node_modules/
+admin/node_modules/
+
+.vscode/
+.idea/
+
+client/.env
+admin/.env
+
+client/build
+admin/build
+
+server/.env
+server/prisma/.env

@@ -1,0 +1,42 @@
+{
+  "name": "ecommerce_store",
+  "version": "1.0.0",
+  "description": "ecommerce store app build with Node, Express, React, MongoDB and GraphQL",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --ext js,graphql app.js",
+    "postinstall": "npx prisma generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phondani0/ecommerce_store.git"
+  },
+  "author": "Ankit Phondani",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/phondani0/ecommerce_store/issues"
+  },
+  "homepage": "https://github.com/phondani0/ecommerce_store#readme",
+  "dependencies": {
+    "@prisma/client": "^2.29.1",
+    "apollo-server": "^2.13.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.23.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.0.0",
+    "graphql-upload": "^12.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "razorpay": "^2.0.6",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "nodemon": "^2.0.12",
+    "prisma": "^2.29.1"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "12.0.0"
+  }
+}
